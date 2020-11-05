@@ -1,5 +1,5 @@
 def project_name = "simple-webserver"
-def git_url = "https://github.com/ecsdigital/devopsplayground-27-k8s-jenkins-pipeline.git"
+def git_url = "https://github.com/shangaro/Hands-on-with-Jenkins-CI-CD-Pipelines-in-Kubernetes.git"
 
 freeStyleJob(project_name) {
 

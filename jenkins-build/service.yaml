@@ -12,3 +12,8 @@ spec:
   selector:
     name: jenkins
   type: NodePort
+
+
+
+
+  

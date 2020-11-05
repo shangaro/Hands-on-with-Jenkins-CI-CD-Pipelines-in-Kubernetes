@@ -1,4 +1,4 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
@@ -17,7 +17,8 @@ spec:
     spec:
       containers:
         - env:
-          image: jenkins:docker
+          name: something
+          image: shangaro/wp_dockerprivrepo1:jenkins
           imagePullPolicy: IfNotPresent
           livenessProbe:
             failureThreshold: 2
@@ -36,6 +37,8 @@ spec:
               mountPath: /var/jenkins_home/
             - name: dockersock
               mountPath: "/var/run/docker.sock"
+      imagePullSecrets:
+        - name: regcred
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       securityContext:

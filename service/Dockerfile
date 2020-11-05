@@ -1,6 +1,6 @@
-FROM alpine
+FROM alpine:latest
 
-RUN apk add python curl
+RUN apk add --update --no-cache curl py-pip
 
 ADD index.html /code/
 
